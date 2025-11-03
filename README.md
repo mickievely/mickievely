@@ -20,7 +20,7 @@ Python, JavaScript, Lua, HTML/CSS, JSON, Node.js 등 다양한 기술을 활용�
 
 ## 📈 GitHub 통계
 
-![xdayoungx's GitHub stats](https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=radical)
+![xdayoungx's GitHub stats](https://github-readme-stats.vercel.app/api?username=mickievely&show_icons=true&theme=radical)
 
 ---
 
