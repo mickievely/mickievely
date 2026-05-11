@@ -1,7 +1,7 @@
 # ㅎㅇ
 
-xdayoungx 임 ㅅㄱ
-Python, JavaScript, Lua, HTML/CSS, JSON, Node.js 등 다양한 기술을 활용하며 원하는거 만드는중 코드 갈구는거 좋아함.
+
+Python, JavaScript, Lua, HTML/CSS, JSON, Node.js 개잘하지
 
 ---
 
@@ -37,4 +37,4 @@ Python, JavaScript, Lua, HTML/CSS, JSON, Node.js 등 다양한 기술을 활용�
 
 ---
 
-> "파이션은 얀되는게없다"
+> 쌀먹야르
