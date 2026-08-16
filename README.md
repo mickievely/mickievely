@@ -7,6 +7,7 @@ Python, JavaScript, Lua, HTML/CSS, JSON, Node.js 개잘하지
 ## 🛠 기술 스택
 
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![pip](https://img.shields.io/badge/-pip-3775A9?style=flat-square&logo=pypi&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
