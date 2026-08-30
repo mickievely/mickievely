@@ -1,6 +1,6 @@
 # ㅎㅇ
 
-Python, JavaScript, Lua, HTML/CSS, JSON, Node.js 개잘하지
+너 게이
 
 ---
 
