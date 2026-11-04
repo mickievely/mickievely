@@ -104,7 +104,7 @@ def language_bytes(token: str) -> list[tuple[str, int, str]]:
         """
         {
           user(login: "mickievely") {
-            repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
+            repositories(first: 100, ownerAffiliations: OWNER) {
               nodes {
                 languages(first: 30, orderBy: {field: SIZE, direction: DESC}) {
                   edges { size node { name color } }
@@ -127,18 +127,25 @@ def language_bytes(token: str) -> list[tuple[str, int, str]]:
             else:
                 totals[name] = [size, color]
     ranked = sorted(totals.items(), key=lambda item: item[1][0], reverse=True)
-    return [(name, size, color) for name, (size, color) in ranked if size >= 1000]
+    return [(name, size, color) for name, (size, color) in ranked if size > 0]
 
 
 def visible_languages(rows: list[tuple[str, int, str]]) -> list[tuple[str, float, str]]:
+    """전체 저장소 바이트 합 기준. 잘린 나머지는 그 외."""
     if not rows:
         return []
-    grand = sum(size for _, size, _ in rows)
-    picked = [row for row in rows if row[1] / grand >= 0.004][:10]
-    if len(picked) < 6:
-        picked = rows[:6]
-    shown = sum(size for _, size, _ in picked) or 1
-    return [(name, size / shown * 100, color) for name, size, color in picked]
+    grand = sum(size for _, size, _ in rows) or 1
+    named: list[tuple[str, float, str]] = []
+    other = 0.0
+    for name, size, color in rows:
+        pct = size / grand * 100
+        if pct >= 0.05 and len(named) < 12:
+            named.append((name, pct, color))
+        else:
+            other += pct
+    if other >= 0.05:
+        named.append(("그 외", other, "#8b949e"))
+    return named
 
 
 def langs_signature(items: list[tuple[str, float, str]]) -> str:
@@ -204,8 +211,8 @@ def render_langs(items: list[tuple[str, float, str]]) -> None:
     readme = README.read_text(encoding="utf-8")
     src = f"{LANGS_RAW}?v={zlib.crc32(langs_signature(items).encode()) & 0xFFFFFFFF:x}"
     readme, img_n = re.subn(
-        r'src="https://(?:github-readme-stats-one-bice\.vercel\.app/api/top-langs/[^"]*|raw\.githubusercontent\.com/mickievely/mickievely/main/github-langs\.svg[^"]*)"',
-        f'src="{src}"',
+        r'(<img height=")\d+(" src=")https://(?:github-readme-stats-one-bice\.vercel\.app/api/top-langs/[^"]*|raw\.githubusercontent\.com/mickievely/mickievely/main/github-langs\.svg[^"]*)(")',
+        rf"\g<1>{height}\g<2>{src}\g<3>",
         readme,
         count=1,
     )
