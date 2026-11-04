@@ -41,7 +41,7 @@
 ## 📈 GitHub 통계
 
 <p>
-  <img height="165" src="https://github-readme-stats-one-bice.vercel.app/api?username=mickievely&show_icons=true&theme=radical&hide_border=true&include_all_commits=true" alt="mickievely GitHub stats" />
+  <img height="165" src="https://raw.githubusercontent.com/mickievely/mickievely/main/github-stats.svg?v=342" alt="mickievely GitHub stats" />
   <img height="165" src="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=mickievely&layout=compact&theme=radical&hide_border=true" alt="mickievely top langs" />
 </p>
 
