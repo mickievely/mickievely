@@ -24,7 +24,7 @@ jobs:
         run: |
           git config user.name "mickievely"
           git config user.email "a01073352166a@gmail.com"
-          git add github-stats.svg README.md
+          git add github-stats.svg github-langs.svg README.md
           git diff --staged --quiet && exit 0
-          git commit -m "chore: include private commits in GitHub stats"
+          git commit -m "chore: refresh GitHub stats including private repos"
           git push
