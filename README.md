@@ -41,8 +41,8 @@
 ## 📈 GitHub 통계
 
 <p>
-  <img height="165" src="https://raw.githubusercontent.com/mickievely/mickievely/main/github-stats.svg?v=846" alt="mickievely GitHub stats" />
-  <img height="275" src="https://raw.githubusercontent.com/mickievely/mickievely/main/github-langs.svg?v=fc1f40a6" alt="mickievely top langs" />
+  <img height="165" src="https://raw.githubusercontent.com/mickievely/mickievely/main/github-stats.svg?v=884" alt="mickievely GitHub stats" />
+  <img height="275" src="https://raw.githubusercontent.com/mickievely/mickievely/main/github-langs.svg?v=d2d4d61b" alt="mickievely top langs" />
 </p>
 
 ---
